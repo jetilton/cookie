@@ -1,0 +1,9 @@
+{
+	"full_name": "Jeff Tilton",
+	"email": "jfftilton@gmail.com",
+	"github_username": "jetilton",
+	"project_name": "My Flask App",
+	"app_name": "myflaskapp",
+	"project_short_description": "A flasky app.",
+	"use_pipenv": ["no", "yes"]
+}

@@ -1,0 +1,19 @@
+ <div class="footer-inner bg-white">
+    <div class="row">
+        <div class="col-sm-3">
+            © {{ cookiecutter.full_name }}
+        </div>
+
+    <div class="col-sm-3 text-right">
+        {% raw %}
+        <a href="{{ url_for('public.about') }}">About</a>
+        {% endraw %}
+    </div>
+    <div class="col-sm-6 text-left">
+       <a href="mailto:{{ cookiecutter.email }}">Contact</a></li>
+    </div>
+  </small>
+</footer>
+
+
+
