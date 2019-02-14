@@ -12,8 +12,17 @@ def members():
     """List members."""
     return render_template('users/members.html')
 
+@blueprint.route('/map/', methods=['GET'])
+def maps():
+    """dashboard"""
+    return render_template('users/dashboard.html', title = 'Map')
+
+@blueprint.route('/table/', methods=['GET'])
+def table():
+    """dashboard"""
+    return render_template('users/dashboard.html', title = 'Table')
 
 @blueprint.route('/dashboard/', methods=['GET', 'POST'])
 def dashboard():
     """dashboard"""
-    return render_template('users/dashboard.html')
+    return render_template('users/dashboard.html', title = 'Dashboard')

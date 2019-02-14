@@ -1,8 +1,26 @@
 {% raw %}
 <ul class="nav">
     <li class="active">
+        <a href="{{ url_for('public.home') }}">
+            <i class="pe-7s-home"></i>
+            <p>Home</p>
+        </a>
+    </li>
+    <li class="active">
+        <a href="{{ url_for('user.maps') }}">
+            <i class="pe-7s-map"></i>
+            <p>Map</p>
+        </a>
+    </li>
+    <li class="active">
+        <a href="{{ url_for('user.table') }}">
+            <i class="pe-7s-menu"></i>
+            <p>Table</p>
+        </a>
+    </li>
+    <li class="active">
         <a href="{{ url_for('user.dashboard') }}">
-            <i class="pe-7s-graph"></i>
+            <i class="pe-7s-graph3"></i>
             <p>Dashboard</p>
         </a>
     </li>
