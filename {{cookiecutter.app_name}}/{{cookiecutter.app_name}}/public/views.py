@@ -34,13 +34,6 @@ def home():
     return render_template('public/home.html', form=form)
 
 
-@blueprint.route('/index/', methods=['GET'])
-def admin():
-    """admin"""
-    
-    return render_template('layout2.html')
-
-
 @blueprint.route('/logout/')
 @login_required
 def logout():
