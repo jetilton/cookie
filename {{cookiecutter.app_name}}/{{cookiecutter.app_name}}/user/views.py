@@ -20,7 +20,7 @@ def maps():
 @blueprint.route('/table/', methods=['GET'])
 def table():
     """dashboard"""
-    return render_template('users/dashboard.html', title = 'Table')
+    return render_template('users/table.html', title = 'Table')
 
 @blueprint.route('/dashboard/', methods=['GET', 'POST'])
 def dashboard():
