@@ -2,7 +2,7 @@
 """User views."""
 from flask import Blueprint, render_template, url_for
 from flask_login import login_required
-
+from config import Config
 blueprint = Blueprint('user', __name__, url_prefix='/users', static_folder='../static')
 
 
@@ -14,12 +14,13 @@ def members():
 
 @blueprint.route('/map/', methods=['GET'])
 def maps():
-    """dashboard"""
-    return render_template('users/dashboard.html', title = 'Map')
+    """map"""
+    c = Config()
+    return render_template('users/maps.html', title = 'Map', LEEFLET_ACCESS_TOKEN=c.LEEFLET_ACCESS_TOKEN )
 
 @blueprint.route('/table/', methods=['GET'])
 def table():
-    """dashboard"""
+    """table"""
     return render_template('users/table.html', title = 'Table')
 
 @blueprint.route('/dashboard/', methods=['GET', 'POST'])

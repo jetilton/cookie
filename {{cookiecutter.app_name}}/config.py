@@ -21,3 +21,4 @@ class Config(object):
     DEBUG_TB_INTERCEPT_REDIRECTS = False
     CACHE_TYPE = 'simple'  # Can be "memcached", "redis", etc.
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    LEEFLET_ACCESS_TOKEN = "{{ cookiecutter.LEEFLET_ACCESS_TOKEN }}"
