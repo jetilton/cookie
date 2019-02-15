@@ -6,6 +6,6 @@
 	"app_name": "myflaskapp",
 	"project_short_description": "A flasky app.",
 	"use_pipenv": ["no", "yes"],
-	"sidebar_color":["blue", "azure", "green", "orange", "red", "purple"],
+	"sidebar_color":["black", "blue", "azure", "green", "orange", "red", "purple"],
 	"LEEFLET_ACCESS_TOKEN":0
 }
