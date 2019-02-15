@@ -1,16 +1,27 @@
 {% raw %}
 {% extends "layout.html" %}
+{% block css %}
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+{% endblock %}
 {% block layout_content %}
-    <div id="mapid"></div>
+    <div id="mapid" style= "height:100%"></div>
 {% endblock %}
 {% block js_custom %}
 <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
 <script type="text/javascript">
     	var streets = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-											maxZoom: 18,
-											id: 'mapbox.streets',
-											accessToken: "{{ LEEFLET_ACCESS_TOKEN }}"
-				});
+				maxZoom: 18,
+				id: 'mapbox.streets',
+				accessToken: "{{ LEEFLET_ACCESS_TOKEN }}"
+		})
+
+		// Create map
+		var mymap = L.map('mapid',{
+				center: [46.271,-115.396 ],
+				zoom: 5,
+				layers:[streets]
+		})
+
 </script>
 
 {% endblock %}
