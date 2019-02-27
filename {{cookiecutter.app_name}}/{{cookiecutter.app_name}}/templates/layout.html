@@ -2,38 +2,34 @@
 {% extends "basic.html" %}
 
 {% block content %}
-{% with links=True %}
-{% include "sidebar.html" %}
-{% endwith %}
-<div class="main-panel">
+  {% with links=True %}
+  {% include "sidebar.html" %}
+  {% endwith %}
+  <div class="main-panel">
 
-{% with links=True %}
-{% include "navbar.html" %}
-{% endwith %}
-  
-    {% block layout_content %}{% endblock %}
-    {% include "footer.html" %}
-</div>
+  {% with links=True %}
+  {% include "navbar.html" %}
+  {% endwith %}
+
+      {% block layout_content %}{% endblock %}
+      {% include "footer.html" %}
+  </div>
+
+
+    {% block js_main %}
+
+    <!--  Charts Plugin -->
+    <script src="../static/js/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="../static/js/bootstrap-notify.js"></script>
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+    <script src="../static/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+
+
+
+    {% endblock %}
 {% endblock %}
-
-{% block js_main %}
-
-<!--  Charts Plugin -->
-<script src="../static/js/chartist.min.js"></script>
-
-<!--  Notifications Plugin    -->
-<script src="../static/js/bootstrap-notify.js"></script>
-
-<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-<script src="../static/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
-
-{% block js_custom %}{% endblock %}
-
-{% endblock %}
-
 
 {% endraw %}
-
-
-
-
