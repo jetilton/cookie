@@ -10,7 +10,7 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
 		'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    FLASK_ENV = os.environ.get('ENV')
+    FLASK_ENV = os.environ.get('FLASK_ENV')
     DEBUG = FLASK_ENV == 'development'
     BCRYPT_LOG_ROUNDS = os.environ.get('BCRYPT_LOG_ROUNDS')
     DEBUG_TB_ENABLED = DEBUG
